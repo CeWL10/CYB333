@@ -59,11 +59,8 @@ except	KeyboardInterrupt: #Except clause used for graceful exit that detect ctrl
 	quit()
 except: #Exception handling for all other exception. Code numbering was added to assist with debugging.
 #All exceptions besides keyboard interrupt result in the message, close of the files, and removing of
-#the blacklist script and the logfile, then graceful exit of the program.
+#the the logfile, then graceful exit of the program.
 	print('\nError Code 2 - Syntax error - port number must contain numbers only. Restart HoneyCat and try again.\n')
-	logF.close()
-	black.close()
-	os.remove('./blacklist.sh')
 	os.remove('./logfile')
 	quit()
 
